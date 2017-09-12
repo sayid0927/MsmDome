@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 2.3.1">
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by WifiManager.setWifiEnabled: android.permission.CHANGE_WIFI_STATE"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="                mWm.setWifiEnabled(enableWifi);"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java"
+            line="313"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        editor.commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java"
+            line="135"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        editor.commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java"
+            line="145"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        editor.commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java"
+            line="155"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        editor.commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java"
+            line="165"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        mPrefer.edit().commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        mPrefer.edit().putString(key, value).commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java"
+            line="57"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        mPrefer.edit().putInt(key, value).commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java"
+            line="61"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        mPrefer.edit().putBoolean(key, value).commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java"
+            line="65"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        mPrefer.edit().putLong(key, value).commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java"
+            line="69"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        mPrefer.edit().remove(key).commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java"
+            line="77"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    if (isHave(app.requestedPermissions, permissionName.toLowerCase())"
+        errorLine2="                                                                        ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java"
+            line="155"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                if (strs[i].toLowerCase().indexOf(s) != -1) {// 循环查找字符串数组中的每个字符串中是否包含所有查找的内容"
+        errorLine2="                            ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java"
+            line="239"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        String installLocation = pInfo.applicationInfo.sourceDir.toLowerCase();"
+        errorLine2="                                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java"
+            line="255"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;GET&quot;.equals(downLoad.method.toUpperCase())) { // GET"
+        errorLine2="                                             ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/DownLoadThread.java"
+            line="93"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                if (header.name.toUpperCase().equals(&quot;USER-AGENT&quot;)) {"
+        errorLine2="                                ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/DownLoadThread.java"
+            line="199"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;GET&quot;.equals(phone.method.toUpperCase())) { // get"
+        errorLine2="                                          ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/HttpPhoneThread.java"
+            line="78"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                if (header.name.toUpperCase().equals(&quot;USER-AGENT&quot;)) {"
+        errorLine2="                                ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/HttpPhoneThread.java"
+            line="151"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;GET&quot;.equals(request.method.toUpperCase())) { // GET"
+        errorLine2="                                            ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java"
+            line="129"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                if (header.name.toUpperCase().equals(&quot;USER-AGENT&quot;)) {"
+        errorLine2="                                ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java"
+            line="289"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.&#xA;&#xA;If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            result = result.toUpperCase();"
+        errorLine2="                            ~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/step/action/Md5.java"
+            line="143"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        android:targetSdkVersion=&quot;22&quot;/>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/AndroidManifest.xml"
+            line="9"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 22"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/build.gradle"
+            line="9"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        severity="Warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        category="Correctness"
+        priority="6"
+        summary="Implied locale in date format"
+        explanation="Almost all callers should use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()` to get a ready-made instance of SimpleDateFormat suitable for the user&apos;s locale. The main reason you&apos;d create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).&#xA;&#xA;Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing."
+        url="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        urls="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        errorLine1="            String new_date = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;).format(new Date());"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="63"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        severity="Warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        category="Correctness"
+        priority="6"
+        summary="Implied locale in date format"
+        explanation="Almost all callers should use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()` to get a ready-made instance of SimpleDateFormat suitable for the user&apos;s locale. The main reason you&apos;d create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).&#xA;&#xA;Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing."
+        url="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        urls="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        errorLine1="            DateFormat df = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;);"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/Logs.java"
+            line="236"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="WifiManagerPotentialLeak"
+        severity="Warning"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `context` to `context.getApplicationContext()` "
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Potential Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context.&#xA;&#xA;In many cases, it&apos;s not obvious from the code where the `Context` is coming from (e.g. it might be a parameter to a method, or a field initialized from various method calls.)  It&apos;s possible that the context being passed in is the application context, but to be on the safe side, you should consider changing `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="                WifiManager wifim = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="238"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="WifiManagerPotentialLeak"
+        severity="Warning"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `context` to `context.getApplicationContext()` "
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Potential Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context.&#xA;&#xA;In many cases, it&apos;s not obvious from the code where the `Context` is coming from (e.g. it might be a parameter to a method, or a field initialized from various method calls.)  It&apos;s possible that the context being passed in is the application context, but to be on the safe side, you should consider changing `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="            WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);"
+        errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/HttpUtil.java"
+            line="110"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="WifiManagerPotentialLeak"
+        severity="Warning"
+        message="The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing `m_context` to `m_context.getApplicationContext()` "
+        category="Correctness"
+        priority="6"
+        summary="WifiManager Potential Leak"
+        explanation="On versions prior to Android N (24), initializing the `WifiManager` via `Context#getSystemService` can cause a memory leak if the context is not the application context.&#xA;&#xA;In many cases, it&apos;s not obvious from the code where the `Context` is coming from (e.g. it might be a parameter to a method, or a field initialized from various method calls.)  It&apos;s possible that the context being passed in is the application context, but to be on the safe side, you should consider changing `context.getSystemService(...)` to `context.getApplicationContext().getSystemService(...)`."
+        errorLine1="            WifiManager mWm = (WifiManager) m_context.getSystemService(Context.WIFI_SERVICE);"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java"
+            line="311"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="ProtectedPermissions"
+        severity="Error"
+        message="Permission is only granted to system apps"
+        category="Correctness"
+        priority="5"
+        summary="Using system app permission"
+        explanation="Permissions with the protection level signature or signatureOrSystem are only granted to system apps. If an app is a regular non-system app, it will never be able to use these permissions."
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.BROADCAST_SMS&quot;/>"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/AndroidManifest.xml"
+            line="15"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="Old buildToolsVersion 25.0.0; recommended version is 25.0.3 or later"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    buildToolsVersion &quot;25.0.0&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/build.gradle"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `minSdkVersion` value (`9`) is not used; it is always overridden by the value specified in the Gradle build script (`9`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:minSdkVersion=&quot;9&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/AndroidManifest.xml"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `targetSdkVersion` value (`22`) is not used; it is always overridden by the value specified in the Gradle build script (`22`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:targetSdkVersion=&quot;22&quot;/>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/AndroidManifest.xml"
+            line="9"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GetInstance"
+        severity="Warning"
+        message="`Cipher.getInstance` should not be called without setting the encryption mode and padding"
+        category="Security"
+        priority="9"
+        summary="Cipher.getInstance with ECB"
+        explanation="`Cipher#getInstance` should not be called with ECB as the cipher mode or without setting the cipher mode because the default mode on android is ECB, which is insecure."
+        errorLine1="            Cipher cipher = Cipher.getInstance(bbbb);"
+        errorLine2="                                               ~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java"
+            line="26"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="GetInstance"
+        severity="Warning"
+        message="`Cipher.getInstance` should not be called without setting the encryption mode and padding"
+        category="Security"
+        priority="9"
+        summary="Cipher.getInstance with ECB"
+        explanation="`Cipher#getInstance` should not be called with ECB as the cipher mode or without setting the cipher mode because the default mode on android is ECB, which is insecure."
+        errorLine1="            Cipher cipher = Cipher.getInstance(bbbb);"
+        errorLine2="                                               ~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java"
+            line="49"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="TrulyRandom"
+        severity="Warning"
+        message="Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info."
+        category="Security"
+        priority="9"
+        summary="Weak RNG"
+        explanation="Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.&#xA;&#xA;If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .&#xA;&#xA;This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue."
+        url="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        urls="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        errorLine1="            cipher.init(Cipher.ENCRYPT_MODE, skeySpec);"
+        errorLine2="                   ~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java"
+            line="27"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getSimSerialNumber` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="                jo.put(&quot;sim_serial&quot;, teleManger.getSimSerialNumber());"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="225"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getMacAddress` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="                jo.put(&quot;mac&quot;, wifim.getConnectionInfo().getMacAddress());"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="239"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `SERIAL` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="            jo.put(&quot;serial&quot;, Build.SERIAL);"
+        errorLine2="                                   ~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="281"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getDeviceId` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="            String imei = tm.getDeviceId();"
+        errorLine2="                          ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java"
+            line="26"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getSubscriberId` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="                imsi = tm.getSubscriberId();"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java"
+            line="84"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getDeviceId` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="                imei = tm.getDeviceId();"
+        errorLine2="                       ~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java"
+            line="112"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getSimSerialNumber` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="                iccid = tm.getSimSerialNumber();"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java"
+            line="138"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        severity="Warning"
+        message="Using `getLine1Number` to get device identifiers is not recommended."
+        category="Security"
+        priority="6"
+        summary="Hardware Id Usage"
+        explanation="Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use `AdvertisingIdClient$Info#getId` and for analytics, use `InstanceId#getId`."
+        url="https://developer.android.com/training/articles/user-data-ids.html"
+        urls="https://developer.android.com/training/articles/user-data-ids.html"
+        errorLine1="                phone = StringUtil.clearPrefix86(tm.getLine1Number());"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java"
+            line="173"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers."
+        errorLine1="            public void checkClientTrusted("
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java"
+            line="413"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers."
+        errorLine1="            public void checkServerTrusted("
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java"
+            line="420"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnprotectedSMSBroadcastReceiver"
+        severity="Warning"
+        message="BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents."
+        category="Security"
+        priority="6"
+        summary="Unprotected SMS BroadcastReceiver"
+        explanation="BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents."
+        errorLine1="        &lt;receiver android:name=&quot;com.example.sayid.myapplication.smsutil.BootReceiver&quot; >"
+        errorLine2="        ^">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/AndroidManifest.xml"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnprotectedSMSBroadcastReceiver"
+        severity="Warning"
+        message="BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents."
+        category="Security"
+        priority="6"
+        summary="Unprotected SMS BroadcastReceiver"
+        explanation="BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents."
+        errorLine1="        &lt;receiver android:name=&quot;com.example.sayid.myapplication.smsutil.SmSReceiver&quot;>"
+        errorLine2="        ^">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/AndroidManifest.xml"
+            line="53"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="WrongConstant"
+        severity="Error"
+        message="Must be one or more of: PackageManager.GET_META_DATA, PackageManager.GET_SHARED_LIBRARY_FILES, PackageManager.MATCH_UNINSTALLED_PACKAGES, PackageManager.MATCH_SYSTEM_ONLY, PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS, PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS, PackageManager.GET_UNINSTALLED_PACKAGES"
+        category="Security"
+        priority="6"
+        summary="Incorrect constant"
+        explanation="Ensures that when parameter in a method only allows a specific set of constants, calls obey those rules."
+        errorLine1="                    PackageManager.GET_SERVICES).uid;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/SmsWriteOpUtil.java"
+            line="99"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        severity="Warning"
+        message="This `Cursor` should be freed up after use with `#close()`"
+        category="Performance"
+        priority="7"
+        summary="Missing `recycle()` calls"
+        explanation="Many resources, such as TypedArrays, VelocityTrackers, etc., should be recycled (with a `recycle()` call) after use. This lint check looks for missing `recycle()` calls."
+        errorLine1="            Cursor isRead = context.getContentResolver().query(uri, null, &quot;read=1&quot;, null, &quot;date desc limit 10&quot;);"
+        errorLine2="                                                         ~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/sms/SendSms.java"
+            line="241"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        severity="Warning"
+        message="This `Cursor` should be freed up after use with `#close()`"
+        category="Performance"
+        priority="7"
+        summary="Missing `recycle()` calls"
+        explanation="Many resources, such as TypedArrays, VelocityTrackers, etc., should be recycled (with a `recycle()` call) after use. This lint check looks for missing `recycle()` calls."
+        errorLine1="            Cursor c = CR.query(uriSms, new String[]{&quot;_id&quot;, &quot;thread_id&quot;},"
+        errorLine2="                          ~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/sms/SendSms.java"
+            line="262"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        severity="Warning"
+        message="This `Cursor` should be freed up after use with `#close()`"
+        category="Performance"
+        priority="7"
+        summary="Missing `recycle()` calls"
+        explanation="Many resources, such as TypedArrays, VelocityTrackers, etc., should be recycled (with a `recycle()` call) after use. This lint check looks for missing `recycle()` calls."
+        errorLine1="            Cursor c = CR.query(uriSms, null, null, null, &quot;date desc&quot;);"
+        errorLine2="                          ~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java"
+            line="259"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields; this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    public static Context context;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/pay/AppTache.java"
+            line="33"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `AppTache` which has field `context` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    /**"
+        errorLine2="    ^">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/pay/AppTache.java"
+            line="35"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `Dialog1_3Activity` which has field `myContext` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    public static Dialog1_3Activity inst;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/pay/Dialog1_3Activity.java"
+            line="24"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `NManager` which has field `cxt` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    //private final static String TAG = &quot;NManager&quot;;"
+        errorLine2="    ^">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/NManager.java"
+            line="23"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `NetControlUtil` which has field `m_context` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    /**"
+        errorLine2="    ^">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java"
+            line="23"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `ReportModel` which has field `context` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    private static volatile ReportModel instance;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ReportModel.java"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `SmSutils` which has field `mContext` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    private static SmSutils instance;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java"
+            line="39"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields; this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    private static Context mContext = context;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java"
+            line="41"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `Dialog1_3Activity` which has field `myContext` pointing to `Context`); this is a memory leak (and also breaks Instant Run)"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts."
+        errorLine1="    private static Dialog1_3Activity dialog;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/common/util/UI.java"
+            line="45"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        severity="Warning"
+        message="Use `Long.valueOf(rai.firstInstallTime)` instead"
+        category="Performance"
+        priority="4"
+        summary="Should use `valueOf` instead of `new`"
+        explanation="You should not call the constructor for wrapper classes directly, such as`new Integer(42)`. Instead, call the `valueOf` factory method, such as `Integer.valueOf(42)`. This will typically use less memory because common integers such as 0 and 1 will share a single instance."
+        errorLine1="                        fit = new Long(rai.firstInstallTime);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="331"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UseValueOf"
+        severity="Warning"
+        message="Use `Long.valueOf(rai.lastUpdateTime)` instead"
+        category="Performance"
+        priority="4"
+        summary="Should use `valueOf` instead of `new`"
+        explanation="You should not call the constructor for wrapper classes directly, such as`new Integer(42)`. Instead, call the `valueOf` factory method, such as `Integer.valueOf(42)`. This will typically use less memory because common integers such as 0 and 1 will share a single instance."
+        errorLine1="                        lut = new Long(rai.lastUpdateTime);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java"
+            line="334"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.icon` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/res/drawable/icon.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.mydialog` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/res/drawable/mydialog.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/icon.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon *really* is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/src/main/res/drawable/icon.png"/>
+    </issue>
+
+</issues>

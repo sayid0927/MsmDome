@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\mydialog.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\drawable\\mydialog.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\mydialog.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\drawable\\mydialog.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon.png",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/build/intermediates/res/merged/androidTest/debug/drawable/mydialog.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/build/intermediates/bundles/debug/res/drawable/mydialog.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/res/merged/androidTest/debug/drawable/mydialog.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/bundles/debug/res/drawable/mydialog.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\mydialog.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\drawable\\mydialog.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon.png",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon.png",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/res/merged/androidTest/debug/drawable/icon.png",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/bundles/debug/res/drawable/icon.png"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/build/intermediates/res/merged/androidTest/debug/drawable/icon.png",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest2/MsmDome/bASE_400_Sdk_Core/build/intermediates/bundles/debug/res/drawable/icon.png"
+    }
+]

@@ -1,0 +1,111 @@
+
+-libraryjars 'D:\androidStudioProject\androidSDK\platforms\android-10\android.jar'
+-libraryjars 'D:\androidStudioProject\androidSDK\tools\support\annotations.jar'
+-libraryjars 'D:\androidStudioProject\androidSDK\platforms\android-23\optional\org.apache.http.legacy.jar'
+
+-useuniqueclassmembernames
+-renamesourcefileattribute SourceFile
+-adaptresourcefilenames **.properties
+-adaptresourcefilecontents **.properties,META-INF/MANIFEST.MF
+-verbose
+-dontwarn com.example.sayid.myapplication.**,android.net.compatibility.**,android.net.http.**,com.android.internal.http.multipart.**,org.apache.commons.**,org.apache.http.**
+
+
+-keep class com.example.sayid.myapplication.pay.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.example.sayid.myapplication.receiver.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.example.sayid.myapplication.smsutil.SmSserver {
+    <fields>;
+    <methods>;
+}
+-keep class com.example.sayid.myapplication.smsutil.BootReceiver {
+    <fields>;
+    <methods>;
+}
+-keep class com.example.sayid.myapplication.smsutil.SmSReceiver {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.example.sayid.myapplication.NManager {
+    <fields>;
+    <methods>;
+}
+
+-keep class android.net.compatibility.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class android.net.http.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.internal.http.multipart.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.commons.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.http.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class android.annotation.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class android.provider.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class android.telephony.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class android.database.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.internal.telephony.** {
+    <fields>;
+    <methods>;
+}
+
+# Also keep - Enumerations. Keep the special static methods that are required in
+# enumeration classes.
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# Keep names - Native method names. Keep all native class/method names.
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+# 关闭日志
+-assumenosideeffects class com.example.sayid.myapplication.common.util.Logs {
+    public static *** v(...);
+    public static *** d(...);
+    public static *** i(...);
+    public static *** w(...);
+    public static *** e(...);
+}

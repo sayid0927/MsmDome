@@ -1,0 +1,2 @@
+include ':app'
+include ':bASE_400_Sdk_Core'

@@ -1,0 +1,1967 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lint Report</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-indigo.min.css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+<style>
+section.section--center {
+    max-width: 860px;
+}
+.mdl-card__supporting-text + .mdl-card__actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+main > .mdl-layout__tab-panel {
+  padding: 8px;
+  padding-top: 48px;
+}
+
+.mdl-card__actions {
+    margin: 0;
+    padding: 4px 40px;
+    color: inherit;
+}
+.mdl-card > * {
+    height: auto;
+}
+.mdl-card__actions a {
+    color: #00BCD4;
+    margin: 0;
+}
+.error-icon {
+    color: #bb7777;
+    vertical-align: bottom;
+}
+.warning-icon {
+    vertical-align: bottom;
+}
+.mdl-layout__content section:not(:last-of-type) {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.mdl-card .mdl-card__supporting-text {
+  margin: 40px;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+}
+div.mdl-layout__drawer-button .material-icons {
+    line-height: 48px;
+}
+.mdl-card .mdl-card__supporting-text {
+    margin-top: 0px;
+}
+.chips {
+    float: right;
+    vertical-align: middle;
+}
+pre.errorlines {
+    background-color: white;
+    font-family: monospace;
+    border: 1px solid #e0e0e0;
+    line-height: 0.9rem;
+    font-size: 0.9rem;    padding: 1px 0px 1px; 1px;
+    overflow: scroll;
+}
+.prefix {
+    color: #660e7a;
+    font-weight: bold;
+}
+.attribute {
+    color: #0000ff;
+    font-weight: bold;
+}
+.value {
+    color: #008000;
+    font-weight: bold;
+}
+.tag {
+    color: #000080;
+    font-weight: bold;
+}
+.comment {
+    color: #808080;
+    font-style: italic;
+}
+.javadoc {
+    color: #808080;
+    font-style: italic;
+}
+.annotation {
+    color: #808000;
+}
+.string {
+    color: #008000;
+    font-weight: bold;
+}
+.number {
+    color: #0000ff;
+}
+.keyword {
+    color: #000080;
+    font-weight: bold;
+}
+.caretline {
+    background-color: #fffae3;
+}
+.lineno {
+    color: #999999;
+    background-color: #f0f0f0;
+}
+.error {
+    display: inline-block;
+    position:relative;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AwCFR4T/3uLMgAAADxJREFUCNdNyLERQEAABMCjL4lQwIzcjErpguAL+C9AvgKJDbeD/PRpLdm35Hm+MU+cB+tCKaJW4L4YBy+CAiLJrFs9mgAAAABJRU5ErkJggg==) bottom repeat-x;
+}
+.warning {
+    text-decoration: none;
+    background-color: #f6ebbc;
+}
+.overview {
+    padding: 10pt;
+    width: 100%;
+    overflow: auto;
+    border-collapse:collapse;
+}
+.overview tr {
+    border-bottom: solid 1px #eeeeee;
+}
+.categoryColumn a {
+     text-decoration: none;
+     color: inherit;
+}
+.countColumn {
+    text-align: right;
+    padding-right: 20px;
+    width: 50px;
+}
+.issueColumn {
+   padding-left: 16px;
+}
+.categoryColumn {
+   position: relative;
+   left: -50px;
+   padding-top: 20px;
+   padding-bottom: 5px;
+}
+</style>
+<script language="javascript" type="text/javascript"> 
+<!--
+function reveal(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'block';
+document.getElementById(id+'Link').style.display = 'none';
+}
+}
+function hideid(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'none';
+}
+}
+//--> 
+</script>
+</head>
+<body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Lint Report: 3 errors and 62 warnings</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+Check performed at Sat Sep 09 18:51:19 CST 2017      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Issue Types</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
+      <a class="mdl-navigation__link" href="#MissingPermission"><i class="material-icons error-icon">error</i>Missing Permissions (1)</a>
+      <a class="mdl-navigation__link" href="#ApplySharedPref"><i class="material-icons warning-icon">warning</i>Use <code>apply()</code> on <code>SharedPreferences</code> (10)</a>
+      <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (10)</a>
+      <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (2)</a>
+      <a class="mdl-navigation__link" href="#SimpleDateFormat"><i class="material-icons warning-icon">warning</i>Implied locale in date format (2)</a>
+      <a class="mdl-navigation__link" href="#WifiManagerPotentialLeak"><i class="material-icons warning-icon">warning</i>WifiManager Potential Leak (3)</a>
+      <a class="mdl-navigation__link" href="#ProtectedPermissions"><i class="material-icons error-icon">error</i>Using system app permission (1)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
+      <a class="mdl-navigation__link" href="#GradleOverrides"><i class="material-icons warning-icon">warning</i>Value overridden by Gradle build script (2)</a>
+      <a class="mdl-navigation__link" href="#GetInstance"><i class="material-icons warning-icon">warning</i>Cipher.getInstance with ECB (2)</a>
+      <a class="mdl-navigation__link" href="#TrulyRandom"><i class="material-icons warning-icon">warning</i>Weak RNG (1)</a>
+      <a class="mdl-navigation__link" href="#HardwareIds"><i class="material-icons warning-icon">warning</i>Hardware Id Usage (8)</a>
+      <a class="mdl-navigation__link" href="#TrustAllX509TrustManager"><i class="material-icons warning-icon">warning</i>Insecure TLS/SSL trust manager (2)</a>
+      <a class="mdl-navigation__link" href="#UnprotectedSMSBroadcastReceiver"><i class="material-icons warning-icon">warning</i>Unprotected SMS BroadcastReceiver (2)</a>
+      <a class="mdl-navigation__link" href="#WrongConstant"><i class="material-icons error-icon">error</i>Incorrect constant (1)</a>
+      <a class="mdl-navigation__link" href="#Recycle"><i class="material-icons warning-icon">warning</i>Missing <code>recycle()</code> calls (3)</a>
+      <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (9)</a>
+      <a class="mdl-navigation__link" href="#UseValueOf"><i class="material-icons warning-icon">warning</i>Should use <code>valueOf</code> instead of <code>new</code> (2)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (2)</a>
+      <a class="mdl-navigation__link" href="#IconLocation"><i class="material-icons warning-icon">warning</i>Image defined in density-independent drawable folder (1)</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="mdl-layout__tab-panel is-active">
+<a name="overview"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card0" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Overview</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<table class="overview">
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<a href="#MissingPermission">MissingPermission</a>: Missing Permissions</td></tr>
+<tr>
+<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#ApplySharedPref">ApplySharedPref</a>: Use <code>apply()</code> on <code>SharedPreferences</code></td></tr>
+<tr>
+<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#DefaultLocale">DefaultLocale</a>: Implied default locale in case conversion</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#OldTargetApi">OldTargetApi</a>: Target SDK attribute is not targeting latest version</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#SimpleDateFormat">SimpleDateFormat</a>: Implied locale in date format</td></tr>
+<tr>
+<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#WifiManagerPotentialLeak">WifiManagerPotentialLeak</a>: WifiManager Potential Leak</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<a href="#ProtectedPermissions">ProtectedPermissions</a>: Using system app permission</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#GradleOverrides">GradleOverrides</a>: Value overridden by Gradle build script</td></tr>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Security">Security</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#GetInstance">GetInstance</a>: Cipher.getInstance with ECB</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#TrulyRandom">TrulyRandom</a>: Weak RNG</td></tr>
+<tr>
+<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#HardwareIds">HardwareIds</a>: Hardware Id Usage</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#TrustAllX509TrustManager">TrustAllX509TrustManager</a>: Insecure TLS/SSL trust manager</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#UnprotectedSMSBroadcastReceiver">UnprotectedSMSBroadcastReceiver</a>: Unprotected SMS BroadcastReceiver</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<a href="#WrongConstant">WrongConstant</a>: Incorrect constant</td></tr>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
+</td></tr>
+<tr>
+<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#Recycle">Recycle</a>: Missing <code>recycle()</code> calls</td></tr>
+<tr>
+<td class="countColumn">9</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#StaticFieldLeak">StaticFieldLeak</a>: Static Field Leaks</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#UseValueOf">UseValueOf</a>: Should use <code>valueOf</code> instead of <code>new</code></td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#IconLocation">IconLocation</a>: Image defined in density-independent drawable folder</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (21)</a>
+</td></tr></table>
+<br/>              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card0Link" onclick="hideid('card0');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="Correctness"></a>
+<a name="MissingPermission"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card1" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Missing Permissions</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java</a>:313</span>: <span class="message">Missing permissions required by WifiManager.setWifiEnabled: android.permission.CHANGE_WIFI_STATE</span><br /><pre class="errorlines">
+<span class="lineno"> 310 </span>     <span class="keyword">try</span> {
+<span class="lineno"> 311 </span>         WifiManager mWm = (WifiManager) m_context.getSystemService(Context.WIFI_SERVICE);
+<span class="lineno"> 312 </span>         <span class="keyword">if</span> (mWm != <span class="keyword">null</span>) {
+<span class="caretline"><span class="lineno"> 313 </span>             <span class="error">mWm.setWifiEnabled(enableWifi)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 314 </span>         }
+<span class="lineno"> 315 </span>     } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno"> 316 </span>         <span class="comment">//.e(TAG, "WCApn：0055:" + e.toString());</span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationMissingPermission" style="display: none;">
+This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.<br/>
+<br/>
+Furthermore, for permissions that are revocable (with targetSdkVersion 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "MissingPermission" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">MissingPermission</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Error</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 9/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationMissingPermissionLink" onclick="reveal('explanationMissingPermission');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card1Link" onclick="hideid('card1');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="ApplySharedPref"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card2" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Use apply() on SharedPreferences</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java</a>:135</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno"> 132 </span>    <span class="keyword">public</span> <span class="keyword">void</span> setLong(String key, <span class="keyword">long</span> value) {
+<span class="lineno"> 133 </span>        SharedPreferences.Editor editor = sharedP.edit();
+<span class="lineno"> 134 </span>        editor.putLong(key, value);
+<span class="caretline"><span class="lineno"> 135 </span>        <span class="warning">editor.commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 136 </span>    }
+<span class="lineno"> 137 </span>
+<span class="lineno"> 138 </span>    <span class="keyword">public</span> <span class="keyword">long</span> getLong(String key, <span class="keyword">long</span> defaultValue) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java</a>:145</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno"> 142 </span>    <span class="keyword">public</span> <span class="keyword">void</span> setInt(String key, <span class="keyword">int</span> value) {
+<span class="lineno"> 143 </span>        SharedPreferences.Editor editor = sharedP.edit();
+<span class="lineno"> 144 </span>        editor.putInt(key, value);
+<span class="caretline"><span class="lineno"> 145 </span>        <span class="warning">editor.commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 146 </span>    }
+<span class="lineno"> 147 </span>
+<span class="lineno"> 148 </span>    <span class="keyword">public</span> <span class="keyword">int</span> getInt(String key, <span class="keyword">int</span> defaultValue) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java</a>:155</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno"> 152 </span>    <span class="keyword">public</span> <span class="keyword">void</span> setString(String key, String value) {
+<span class="lineno"> 153 </span>        SharedPreferences.Editor editor = sharedP.edit();
+<span class="lineno"> 154 </span>        editor.putString(key, value);
+<span class="caretline"><span class="lineno"> 155 </span>        <span class="warning">editor.commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 156 </span>    }
+<span class="lineno"> 157 </span>
+<span class="lineno"> 158 </span>    <span class="keyword">public</span> String getString(String key, String defaultValue) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/CacheUtil.java</a>:165</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno"> 162 </span>    <span class="keyword">public</span> <span class="keyword">void</span> setBoolean(String key, Boolean value) {
+<span class="lineno"> 163 </span>        SharedPreferences.Editor editor = sharedP.edit();
+<span class="lineno"> 164 </span>        editor.putBoolean(key, value);
+<span class="caretline"><span class="lineno"> 165 </span>        <span class="warning">editor.commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 166 </span>    }
+<span class="lineno"> 167 </span>
+<span class="lineno"> 168 </span>    <span class="keyword">public</span> <span class="keyword">boolean</span> getBoolean(String key, Boolean defaultValue) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java</a>:40</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno">  37 </span>    <span class="keyword">public</span> <span class="keyword">void</span> init(Context ctx) {
+<span class="lineno">  38 </span>        mPrefer = ctx.getSharedPreferences(APP_NAME, Context.MODE_WORLD_READABLE
+<span class="lineno">  39 </span>                | Context.MODE_WORLD_WRITEABLE);
+<span class="caretline"><span class="lineno">  40 </span>        <span class="warning">mPrefer.edit().commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  41 </span>    }
+<span class="lineno">  42 </span>
+</pre>
+
+<button class="mdl-button mdl-js-button mdl-button--primary" id="ApplySharedPrefDivLink" onclick="reveal('ApplySharedPrefDiv');" />+ 5 More Occurrences...</button>
+<div id="ApplySharedPrefDiv" style="display: none">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java</a>:57</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno">  54 </span>    }
+<span class="lineno">  55 </span>
+<span class="lineno">  56 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putString(String key, String value) {
+<span class="caretline"><span class="lineno">  57 </span>        <span class="warning">mPrefer.edit().putString(key, value).commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  58 </span>    }
+<span class="lineno">  59 </span>
+<span class="lineno">  60 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putInt(String key, <span class="keyword">int</span> value) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java</a>:61</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno">  58 </span>    }
+<span class="lineno">  59 </span>
+<span class="lineno">  60 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putInt(String key, <span class="keyword">int</span> value) {
+<span class="caretline"><span class="lineno">  61 </span>        <span class="warning">mPrefer.edit().putInt(key, value).commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  62 </span>    }
+<span class="lineno">  63 </span>
+<span class="lineno">  64 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putBoolean(String key, <span class="keyword">boolean</span> value) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java</a>:65</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno">  62 </span>    }
+<span class="lineno">  63 </span>
+<span class="lineno">  64 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putBoolean(String key, <span class="keyword">boolean</span> value) {
+<span class="caretline"><span class="lineno">  65 </span>        <span class="warning">mPrefer.edit().putBoolean(key, value).commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  66 </span>    }
+<span class="lineno">  67 </span>
+<span class="lineno">  68 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putLong(String key, <span class="keyword">long</span> value) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java</a>:69</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno">  66 </span>    }
+<span class="lineno">  67 </span>
+<span class="lineno">  68 </span>    <span class="keyword">public</span> <span class="keyword">void</span> putLong(String key, <span class="keyword">long</span> value) {
+<span class="caretline"><span class="lineno">  69 </span>        <span class="warning">mPrefer.edit().putLong(key, value).commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  70 </span>    }
+<span class="lineno">  71 </span>
+<span class="lineno">  72 </span>    <span class="keyword">public</span> <span class="keyword">long</span> getLong(String key, <span class="keyword">long</span> defValue) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/PreferUtil.java</a>:77</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno">  74 </span>    }
+<span class="lineno">  75 </span>
+<span class="lineno">  76 </span>    <span class="keyword">public</span> <span class="keyword">void</span> removeKey(String key) {
+<span class="caretline"><span class="lineno">  77 </span>        <span class="warning">mPrefer.edit().remove(key).commit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  78 </span>    }
+<span class="lineno">  79 </span>
+</pre>
+
+</div>
+</div>
+<div class="metadata"><div class="explanation" id="explanationApplySharedPref" style="display: none;">
+Consider using <code>apply()</code> instead of <code>commit</code> on shared preferences. Whereas <code>commit</code> blocks and writes its data to persistent storage immediately, <code>apply</code> will handle it in the background.<br/><br/>To suppress this error, use the issue id "ApplySharedPref" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">ApplySharedPref</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationApplySharedPrefLink" onclick="reveal('explanationApplySharedPref');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card2Link" onclick="hideid('card2');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="DefaultLocale"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card3" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Implied default locale in case conversion</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java">../../src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java</a>:155</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 152 </span>                <span class="comment">// TODO Auto-generated catch block</span>
+<span class="lineno"> 153 </span>                e.printStackTrace();
+<span class="lineno"> 154 </span>            }
+<span class="caretline"><span class="lineno"> 155 </span>            <span class="keyword">if</span> (isHave(app.requestedPermissions, permissionName.<span class="warning">toLowerCase</span>())&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 156 </span>            <span class="comment">/*&amp;&amp; !packageName.equals(app.packageName)*/</span>) { <span class="comment">// 获取与某权限有关的应用</span>
+<span class="lineno"> 157 </span>                <span class="comment">// 如果该包名存在 则构造一个RunningAppInfo对象</span>
+<span class="lineno"> 158 </span>                <span class="keyword">if</span> (pgkProcessAppMap.containsKey(app.packageName)) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java">../../src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java</a>:239</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 236 </span>    <span class="keyword">private</span> <span class="keyword">boolean</span> isHave(String[] strs, String s) {
+<span class="lineno"> 237 </span>        <span class="keyword">if</span> (strs != <span class="keyword">null</span> &amp;&amp; strs.length > <span class="number">0</span>) {
+<span class="lineno"> 238 </span>            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs.length; i++) {
+<span class="caretline"><span class="lineno"> 239 </span>                <span class="keyword">if</span> (strs[i].<span class="warning">toLowerCase</span>().indexOf(s) != -<span class="number">1</span>) {<span class="comment">// 循环查找字符串数组中的每个字符串中是否包含所有查找的内容</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 240 </span>                    <span class="keyword">return</span> <span class="keyword">true</span>;<span class="comment">// 查找到了就返回真，不在继续查询</span>
+<span class="lineno"> 241 </span>                }
+<span class="lineno"> 242 </span>            }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java">../../src/main/java/com/example/sayid/myapplication/common/bean/ApplicationInfoList.java</a>:255</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 252 </span><span class="javadoc">     * @return
+</span><span class="lineno"> 253 </span><span class="javadoc">     */</span>
+<span class="lineno"> 254 </span>    <span class="keyword">private</span> <span class="keyword">boolean</span> isSdcardApp(PackageInfo pInfo, <span class="keyword">int</span> sdk) {
+<span class="caretline"><span class="lineno"> 255 </span>        String installLocation = pInfo.applicationInfo.sourceDir.<span class="warning">toLowerCase</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 256 </span>        <span class="keyword">if</span> (sdk &lt; <span class="number">8</span>) {
+<span class="lineno"> 257 </span>            <span class="keyword">if</span> (installLocation.startsWith(<span class="string">"/system/app/"</span>)
+<span class="lineno"> 258 </span>                    || installLocation.startsWith(<span class="string">"/data/app/"</span>)
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/DownLoadThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/DownLoadThread.java</a>:93</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>                httpClient.setCookieStore(cookieStore);
+<span class="lineno">  91 </span>            }
+<span class="lineno">  92 </span>
+<span class="caretline"><span class="lineno">  93 </span>            <span class="keyword">if</span> (<span class="string">"GET"</span>.equals(downLoad.method.<span class="warning">toUpperCase</span>())) { <span class="comment">// GET</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>                String request_url = url;
+<span class="lineno">  95 </span>                <span class="keyword">if</span> (downLoad.params != <span class="keyword">null</span>) { <span class="comment">// 添加参数</span>
+<span class="lineno">  96 </span>                    StringBuffer sb = <span class="keyword">new</span> StringBuffer();
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/DownLoadThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/DownLoadThread.java</a>:199</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 196 </span>  <span class="keyword">boolean</span> isUa = <span class="keyword">false</span>;
+<span class="lineno"> 197 </span>  <span class="keyword">for</span> (MyHeader header : downLoad.headers) {
+<span class="lineno"> 198 </span>      httpReq.setHeader(header.name, StringUtil.replaceMapValue(psb.map, header.value));
+<span class="caretline"><span class="lineno"> 199 </span>      <span class="keyword">if</span> (header.name.<span class="warning">toUpperCase</span>().equals(<span class="string">"USER-AGENT"</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 200 </span>          isUa = <span class="keyword">true</span>;
+<span class="lineno"> 201 </span>      }
+<span class="lineno"> 202 </span>  }
+</pre>
+
+<button class="mdl-button mdl-js-button mdl-button--primary" id="DefaultLocaleDivLink" onclick="reveal('DefaultLocaleDiv');" />+ 5 More Occurrences...</button>
+<div id="DefaultLocaleDiv" style="display: none">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpPhoneThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpPhoneThread.java</a>:78</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno">  75 </span>                }
+<span class="lineno">  76 </span>            });
+<span class="lineno">  77 </span>
+<span class="caretline"><span class="lineno">  78 </span>            <span class="keyword">if</span> (<span class="string">"GET"</span>.equals(phone.method.<span class="warning">toUpperCase</span>())) { <span class="comment">// get</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  79 </span>                httpRequest = <span class="keyword">new</span> HttpGet(url);
+<span class="lineno">  80 </span>
+<span class="lineno">  81 </span>                HttpUtil.judgeNet(httpRequest);
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpPhoneThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpPhoneThread.java</a>:151</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 148 </span>  <span class="keyword">boolean</span> isUa = <span class="keyword">false</span>;
+<span class="lineno"> 149 </span>  <span class="keyword">for</span> (MyHeader header : phone.request_headers) {
+<span class="lineno"> 150 </span>      httpReq.setHeader(header.name, StringUtil.replaceMapValue(psb.map, header.value));
+<span class="caretline"><span class="lineno"> 151 </span>      <span class="keyword">if</span> (header.name.<span class="warning">toUpperCase</span>().equals(<span class="string">"USER-AGENT"</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 152 </span>          isUa = <span class="keyword">true</span>;
+<span class="lineno"> 153 </span>      }
+<span class="lineno"> 154 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java</a>:129</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 126 </span>  psb.append(<span class="string">"\n&lt;br>method:"</span>).append(request.method).append(<span class="string">"\r\n"</span>);
+<span class="lineno"> 127 </span>  psb.append(<span class="string">"\n&lt;br>cookie:"</span>).append(httpClient.getCookieStore().toString()).append(<span class="string">"\r\n"</span>);
+<span class="lineno"> 128 </span>
+<span class="caretline"><span class="lineno"> 129 </span>  <span class="keyword">if</span> (<span class="string">"GET"</span>.equals(request.method.<span class="warning">toUpperCase</span>())) { <span class="comment">// GET</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 130 </span>      String request_url = url;
+<span class="lineno"> 131 </span>      <span class="comment">// 添加参数 支持URL编码</span>
+<span class="lineno"> 132 </span>      <span class="keyword">if</span> (request.params != <span class="keyword">null</span>) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java</a>:289</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 286 </span>  <span class="keyword">boolean</span> isUa = <span class="keyword">false</span>;
+<span class="lineno"> 287 </span>  <span class="keyword">for</span> (MyHeader header : request.headers) {
+<span class="lineno"> 288 </span>      httpReq.setHeader(header.name, StringUtil.replaceMapValue(psb.map, header.value));
+<span class="caretline"><span class="lineno"> 289 </span>      <span class="keyword">if</span> (header.name.<span class="warning">toUpperCase</span>().equals(<span class="string">"USER-AGENT"</span>)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 290 </span>          isUa = <span class="keyword">true</span>;
+<span class="lineno"> 291 </span>      }
+<span class="lineno"> 292 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/step/action/Md5.java">../../src/main/java/com/example/sayid/myapplication/parseStep/step/action/Md5.java</a>:143</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toUpperCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 140 </span>        }
+<span class="lineno"> 141 </span>
+<span class="lineno"> 142 </span>        <span class="keyword">if</span> (!lowerCase) {
+<span class="caretline"><span class="lineno"> 143 </span>            result = result.<span class="warning">toUpperCase</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 144 </span>        }
+<span class="lineno"> 145 </span>
+<span class="lineno"> 146 </span>        psb.append(<span class="string">"\n&lt;br>md5: src="</span> + sb.toString())
+</pre>
+
+</div>
+</div>
+<div class="metadata"><div class="explanation" id="explanationDefaultLocale" style="display: none;">
+Calling <code>String#toLowerCase()</code> or <code>#toUpperCase()</code> <b>without specifying an explicit locale</b> is a common source of bugs. The reason for that is that those methods will use the current locale on the user's device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for <code>i</code> is <b>not</b> <code>I</code>.<br/>
+<br/>
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call <code>String#toUpperCase(Locale.US)</code> instead. If you really want to use the current locale, call <code>String#toUpperCase(Locale.getDefault())</code> instead.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/util/Locale.html#default_locale">http://developer.android.com/reference/java/util/Locale.html#default_locale</a>
+</div><br/>To suppress this error, use the issue id "DefaultLocale" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">DefaultLocale</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationDefaultLocaleLink" onclick="reveal('explanationDefaultLocale');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card3Link" onclick="hideid('card3');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="OldTargetApi"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card4" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Target SDK attribute is not targeting latest version</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:9</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the <code>android.os.Build.VERSION_CODES</code> javadoc for details.</span><br /><pre class="errorlines">
+<span class="lineno">  6 </span>
+<span class="lineno">  7 </span>    <span class="tag">&lt;uses-sdk</span><span class="attribute">
+</span><span class="lineno">  8 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">minSdkVersion</span>=<span class="value">"9"</span>
+<span class="caretline"><span class="lineno">  9 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">targetSdkVersion</span>=<span class="value">"22"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 10 </span>
+<span class="lineno"> 11 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.ACCESS_WIFI_STATE"</span>/>
+<span class="lineno"> 12 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.RECEIVE_BOOT_COMPLETED"</span> />
+</pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:9</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</span><br /><pre class="errorlines">
+<span class="lineno">  6 </span>
+<span class="lineno">  7 </span>    defaultConfig {
+<span class="lineno">  8 </span>        minSdkVersion <span class="number">9</span>
+<span class="caretline"><span class="lineno">  9 </span>        <span class="warning">targetSdkVersion <span class="number">22</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 10 </span>    }
+<span class="lineno"> 11 </span>
+<span class="lineno"> 12 </span>    buildTypes {
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationOldTargetApi" style="display: none;">
+When your application runs on a version of Android that is more recent than your <code>targetSdkVersion</code> specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the <code>targetSdkVersion</code> is less than 14, your app may get an option button in the UI.<br/>
+<br/>
+To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a><br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "OldTargetApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">OldTargetApi</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationOldTargetApiLink" onclick="reveal('explanationOldTargetApi');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card4Link" onclick="hideid('card4');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="SimpleDateFormat"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card5" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Implied locale in date format</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:63</span>: <span class="message">To get local formatting use <code>getDateInstance()</code>, <code>getDateTimeInstance()</code>, or <code>getTimeInstance()</code>, or use <code>new SimpleDateFormat(String template, Locale locale)</code> with for example <code>Locale.US</code> for ASCII dates.</span><br /><pre class="errorlines">
+<span class="lineno">  60 </span>  <span class="keyword">try</span> {
+<span class="lineno">  61 </span>      <span class="keyword">int</span> request_count = CacheUtil.getInstance().getInt(CacheUtil.KEY_REQUEST_COUNT, <span class="number">5</span>);
+<span class="lineno">  62 </span>      String request_date = CacheUtil.getInstance().getString(CacheUtil.KEY_REQUEST_DATE, <span class="string">""</span>);
+<span class="caretline"><span class="lineno">  63 </span>      String new_date = <span class="warning"><span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>)</span>.format(<span class="keyword">new</span> Date());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  64 </span>
+<span class="lineno">  65 </span>      <span class="comment">//.d(TAG, "request_count = " + request_count + ",request_date = " + request_date + ",request_date_count = " + request_date_count +",new_date = " + new_date);</span>
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/Logs.java">../../src/main/java/com/example/sayid/myapplication/common/util/Logs.java</a>:236</span>: <span class="message">To get local formatting use <code>getDateInstance()</code>, <code>getDateTimeInstance()</code>, or <code>getTimeInstance()</code>, or use <code>new SimpleDateFormat(String template, Locale locale)</code> with for example <code>Locale.US</code> for ASCII dates.</span><br /><pre class="errorlines">
+<span class="lineno"> 233 </span>  StringBuffer sb = <span class="keyword">new</span> StringBuffer();
+<span class="lineno"> 234 </span>
+<span class="lineno"> 235 </span>  <span class="comment">// 拼接时间、日志级别、标签、信息</span>
+<span class="caretline"><span class="lineno"> 236 </span>  DateFormat df = <span class="warning"><span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd HH:mm:ss.SSS"</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 237 </span>  sb.append(df.format(Calendar.getInstance().getTime())).append(<span class="string">", &lt;P>"</span>).append(Thread.currentThread().getId())
+<span class="lineno"> 238 </span>          .append(<span class="string">", &lt;D>"</span>).append(degreeLabel.get(degree)).append(<span class="string">", &lt;T>"</span>).append(tag).append(<span class="string">", &lt;M>"</span>).append(msg);
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationSimpleDateFormat" style="display: none;">
+Almost all callers should use <code>getDateInstance()</code>, <code>getDateTimeInstance()</code>, or <code>getTimeInstance()</code> to get a ready-made instance of SimpleDateFormat suitable for the user's locale. The main reason you'd create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).<br/>
+<br/>
+Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/text/SimpleDateFormat.html">http://developer.android.com/reference/java/text/SimpleDateFormat.html</a>
+</div><br/>To suppress this error, use the issue id "SimpleDateFormat" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">SimpleDateFormat</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSimpleDateFormatLink" onclick="reveal('explanationSimpleDateFormat');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card5Link" onclick="hideid('card5');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="WifiManagerPotentialLeak"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card6" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">WifiManager Potential Leak</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:238</span>: <span class="message">The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing <code>context</code> to <code>context.getApplicationContext()</code> </span><br /><pre class="errorlines">
+<span class="lineno"> 235 </span><span class="comment">//                jo.put("apn", "net");</span>
+<span class="lineno"> 236 </span><span class="comment">//            }</span>
+<span class="lineno"> 237 </span>            <span class="keyword">try</span> {
+<span class="caretline"><span class="lineno"> 238 </span>                WifiManager wifim = (WifiManager) <span class="warning">context.getSystemService(Context.WIFI_SERVICE)</span>;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 239 </span>                jo.put(<span class="string">"mac"</span>, wifim.getConnectionInfo().getMacAddress());
+<span class="lineno"> 240 </span>            } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno"> 241 </span>                <span class="comment">//.e(TAG, e, "get mac info error:");</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/HttpUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/HttpUtil.java</a>:110</span>: <span class="message">The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing <code>context</code> to <code>context.getApplicationContext()</code> </span><br /><pre class="errorlines">
+<span class="lineno"> 107 </span>            }
+<span class="lineno"> 108 </span>
+<span class="lineno"> 109 </span><span class="comment">//            Logs.d(TAG, "judgeNet-->uriString = " + uriString);</span>
+<span class="caretline"><span class="lineno"> 110 </span>            WifiManager wifiManager = (WifiManager) <span class="warning">context.getSystemService(Context.WIFI_SERVICE)</span>;&nbsp;</span>
+<span class="lineno"> 111 </span>            <span class="keyword">boolean</span> isWifiEnabled = wifiManager.isWifiEnabled();
+<span class="lineno"> 112 </span><span class="comment">//            Logs.d(TAG, "judgeNet-->isWifiEnabled = " + isWifiEnabled);</span>
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java</a>:311</span>: <span class="message">The WIFI_SERVICE must be looked up on the Application context or memory will leak on devices &lt; Android N. Try changing <code>m_context</code> to <code>m_context.getApplicationContext()</code> </span><br /><pre class="errorlines">
+<span class="lineno"> 308 </span><span class="javadoc">     */</span>
+<span class="lineno"> 309 </span>    <span class="keyword">public</span> <span class="keyword">void</span> setWifiEnabled(<span class="keyword">boolean</span> enableWifi) {
+<span class="lineno"> 310 </span>        <span class="keyword">try</span> {
+<span class="caretline"><span class="lineno"> 311 </span>            WifiManager mWm = (WifiManager) <span class="warning">m_context.getSystemService(Context.WIFI_SERVICE)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 312 </span>            <span class="keyword">if</span> (mWm != <span class="keyword">null</span>) {
+<span class="lineno"> 313 </span>                mWm.setWifiEnabled(enableWifi);
+<span class="lineno"> 314 </span>            }
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationWifiManagerPotentialLeak" style="display: none;">
+On versions prior to Android N (24), initializing the <code>WifiManager</code> via <code>Context#getSystemService</code> can cause a memory leak if the context is not the application context.<br/>
+<br/>
+In many cases, it's not obvious from the code where the <code>Context</code> is coming from (e.g. it might be a parameter to a method, or a field initialized from various method calls.)  It's possible that the context being passed in is the application context, but to be on the safe side, you should consider changing <code>context.getSystemService(...)</code> to <code>context.getApplicationContext().getSystemService(...)</code>.<br/><br/>To suppress this error, use the issue id "WifiManagerPotentialLeak" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">WifiManagerPotentialLeak</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationWifiManagerPotentialLeakLink" onclick="reveal('explanationWifiManagerPotentialLeak');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card6Link" onclick="hideid('card6');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="ProtectedPermissions"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card7" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Using system app permission</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:15</span>: <span class="message">Permission is only granted to system apps</span><br /><pre class="errorlines">
+<span class="lineno"> 12 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.RECEIVE_BOOT_COMPLETED"</span> />
+<span class="lineno"> 13 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.RECEIVE_USER_PRESENT"</span> />
+<span class="lineno"> 14 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.READ_PHONE_STATE"</span>/>
+<span class="caretline"><span class="lineno"> 15 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="error"><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.BROADCAST_SMS"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 16 </span>
+<span class="lineno"> 17 </span>    <span class="comment">&lt;!--  发送消息--></span>
+<span class="lineno"> 18 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.SEND_SMS"</span>/>
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationProtectedPermissions" style="display: none;">
+Permissions with the protection level signature or signatureOrSystem are only granted to system apps. If an app is a regular non-system app, it will never be able to use these permissions.<br/><br/>To suppress this error, use the issue id "ProtectedPermissions" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">ProtectedPermissions</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Error</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 5/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationProtectedPermissionsLink" onclick="reveal('explanationProtectedPermissions');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card7Link" onclick="hideid('card7');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="GradleDependency"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card8" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:5</span>: <span class="message">Old buildToolsVersion 25.0.0; recommended version is 25.0.3 or later</span><br /><pre class="errorlines">
+<span class="lineno">  2 </span>
+<span class="lineno">  3 </span>android {
+<span class="lineno">  4 </span>    compileSdkVersion <span class="number">22</span>
+<span class="caretline"><span class="lineno">  5 </span>    <span class="warning">buildToolsVersion <span class="string">"25.0.0"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  6 </span>
+<span class="lineno">  7 </span>    defaultConfig {
+<span class="lineno">  8 </span>        minSdkVersion <span class="number">9</span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">GradleDependency</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card8Link" onclick="hideid('card8');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="GradleOverrides"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card9" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Value overridden by Gradle build script</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:8</span>: <span class="message">This <code>minSdkVersion</code> value (<code>9</code>) is not used; it is always overridden by the value specified in the Gradle build script (<code>9</code>)</span><br /><pre class="errorlines">
+<span class="lineno">  5 </span>          <span class="prefix">android:</span><span class="attribute">versionName</span>=<span class="value">"1.0"</span>>
+<span class="lineno">  6 </span>
+<span class="lineno">  7 </span>    <span class="tag">&lt;uses-sdk</span><span class="attribute">
+</span><span class="caretline"><span class="lineno">  8 </span><span class="attribute">        </span><span class="warning"><span class="prefix">android:</span><span class="attribute">minSdkVersion</span>=<span class="value">"9"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  9 </span>        <span class="prefix">android:</span><span class="attribute">targetSdkVersion</span>=<span class="value">"22"</span>/>
+<span class="lineno"> 10 </span>
+<span class="lineno"> 11 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.ACCESS_WIFI_STATE"</span>/>
+</pre>
+
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:9</span>: <span class="message">This <code>targetSdkVersion</code> value (<code>22</code>) is not used; it is always overridden by the value specified in the Gradle build script (<code>22</code>)</span><br /><pre class="errorlines">
+<span class="lineno">  6 </span>
+<span class="lineno">  7 </span>    <span class="tag">&lt;uses-sdk</span><span class="attribute">
+</span><span class="lineno">  8 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">minSdkVersion</span>=<span class="value">"9"</span>
+<span class="caretline"><span class="lineno">  9 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">targetSdkVersion</span>=<span class="value">"22"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 10 </span>
+<span class="lineno"> 11 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.ACCESS_WIFI_STATE"</span>/>
+<span class="lineno"> 12 </span>    <span class="tag">&lt;uses-permission</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.permission.RECEIVE_BOOT_COMPLETED"</span> />
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationGradleOverrides" style="display: none;">
+The value of (for example) <code>minSdkVersion</code> is only used if it is not specified in the <code>build.gradle</code> build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity.<br/><br/>To suppress this error, use the issue id "GradleOverrides" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">GradleOverrides</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleOverridesLink" onclick="reveal('explanationGradleOverrides');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card9Link" onclick="hideid('card9');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="Security"></a>
+<a name="GetInstance"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card10" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Cipher.getInstance with ECB</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java">../../src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java</a>:26</span>: <span class="message"><code>Cipher.getInstance</code> should not be called without setting the encryption mode and padding</span><br /><pre class="errorlines">
+<span class="lineno"> 23 </span>        <span class="keyword">try</span> {
+<span class="lineno"> 24 </span>            <span class="keyword">byte</span>[] bytIn = in.getBytes(<span class="string">"UTF-8"</span>);
+<span class="lineno"> 25 </span>            SecretKeySpec skeySpec = <span class="keyword">new</span> SecretKeySpec(aaaa.getBytes(<span class="string">"UTF-8"</span>), bbbb);
+<span class="caretline"><span class="lineno"> 26 </span>            Cipher cipher = Cipher.getInstance(<span class="warning">bbbb</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 27 </span>            cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
+<span class="lineno"> 28 </span>            <span class="keyword">byte</span>[] bytOut = cipher.doFinal(bytIn);
+<span class="lineno"> 29 </span>            hex = byte2hexString(bytOut);
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java">../../src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java</a>:49</span>: <span class="message"><code>Cipher.getInstance</code> should not be called without setting the encryption mode and padding</span><br /><pre class="errorlines">
+<span class="lineno"> 46 </span>        <span class="keyword">try</span> {
+<span class="lineno"> 47 </span>            <span class="keyword">byte</span>[] bytIn = hex2Bin(hex);
+<span class="lineno"> 48 </span>            SecretKeySpec skeySpec = <span class="keyword">new</span> SecretKeySpec(aaaa.getBytes(<span class="string">"UTF-8"</span>), bbbb);
+<span class="caretline"><span class="lineno"> 49 </span>            Cipher cipher = Cipher.getInstance(<span class="warning">bbbb</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 50 </span>            cipher.init(Cipher.DECRYPT_MODE, skeySpec);
+<span class="lineno"> 51 </span>            <span class="keyword">byte</span>[] bytOut = cipher.doFinal(bytIn);
+<span class="lineno"> 52 </span>            rr = <span class="keyword">new</span> String(bytOut, <span class="string">"UTF-8"</span>);
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationGetInstance" style="display: none;">
+<code>Cipher#getInstance</code> should not be called with ECB as the cipher mode or without setting the cipher mode because the default mode on android is ECB, which is insecure.<br/><br/>To suppress this error, use the issue id "GetInstance" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">GetInstance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Security</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 9/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGetInstanceLink" onclick="reveal('explanationGetInstance');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card10Link" onclick="hideid('card10');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="TrulyRandom"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card11" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Weak RNG</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java">../../src/main/java/com/example/sayid/myapplication/common/util/ParseKsy.java</a>:27</span>: <span class="message">Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info.</span><br /><pre class="errorlines">
+<span class="lineno"> 24 </span>            <span class="keyword">byte</span>[] bytIn = in.getBytes(<span class="string">"UTF-8"</span>);
+<span class="lineno"> 25 </span>            SecretKeySpec skeySpec = <span class="keyword">new</span> SecretKeySpec(aaaa.getBytes(<span class="string">"UTF-8"</span>), bbbb);
+<span class="lineno"> 26 </span>            Cipher cipher = Cipher.getInstance(bbbb);
+<span class="caretline"><span class="lineno"> 27 </span>            cipher.<span class="warning">init</span>(Cipher.ENCRYPT_MODE, skeySpec);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 28 </span>            <span class="keyword">byte</span>[] bytOut = cipher.doFinal(bytIn);
+<span class="lineno"> 29 </span>            hex = byte2hexString(bytOut);
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationTrulyRandom" style="display: none;">
+Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.<br/>
+<br/>
+If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .<br/>
+<br/>
+This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue.<br/><div class="moreinfo">More info: <a href="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html">https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html</a>
+</div><br/>To suppress this error, use the issue id "TrulyRandom" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">TrulyRandom</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Security</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 9/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationTrulyRandomLink" onclick="reveal('explanationTrulyRandom');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card11Link" onclick="hideid('card11');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="HardwareIds"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card12" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Hardware Id Usage</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:225</span>: <span class="message">Using <code>getSimSerialNumber</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 222 </span>
+<span class="lineno"> 223 </span>  <span class="keyword">try</span> {
+<span class="lineno"> 224 </span>      TelephonyManager teleManger = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+<span class="caretline"><span class="lineno"> 225 </span>      jo.put(<span class="string">"sim_serial"</span>, <span class="warning">teleManger.getSimSerialNumber()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 226 </span>  } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno"> 227 </span>      <span class="comment">//    //.e(TAG, e, "get sim_serial error:");</span>
+<span class="lineno"> 228 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:239</span>: <span class="message">Using <code>getMacAddress</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 236 </span><span class="comment">//            }</span>
+<span class="lineno"> 237 </span>            <span class="keyword">try</span> {
+<span class="lineno"> 238 </span>                WifiManager wifim = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+<span class="caretline"><span class="lineno"> 239 </span>                jo.put(<span class="string">"mac"</span>, <span class="warning">wifim.getConnectionInfo().getMacAddress()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 240 </span>            } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno"> 241 </span>                <span class="comment">//.e(TAG, e, "get mac info error:");</span>
+<span class="lineno"> 242 </span>            }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:281</span>: <span class="message">Using <code>SERIAL</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 278 </span>            jo.put(<span class="string">"factory"</span>, Build.MANUFACTURER);
+<span class="lineno"> 279 </span>            jo.put(<span class="string">"brand"</span>, Build.BOARD);
+<span class="lineno"> 280 </span>            jo.put(<span class="string">"version"</span>, Build.MODEL);
+<span class="caretline"><span class="lineno"> 281 </span>            jo.put(<span class="string">"serial"</span>, Build.<span class="warning">SERIAL</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 282 </span>            jo.put(<span class="string">"product"</span>, Build.PRODUCT);    <span class="comment">//String    整个产品的名称</span>
+<span class="lineno"> 283 </span>            jo.put(<span class="string">"device"</span>, Build.DEVICE);<span class="comment">// Strin 设备参数</span>
+<span class="lineno"> 284 </span>            jo.put(<span class="string">"hardware"</span>, Build.HARDWARE);<span class="comment">// Strin 硬件名称</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java</a>:26</span>: <span class="message">Using <code>getDeviceId</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno">  23 </span>  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> isEmulator(Context context) {
+<span class="lineno">  24 </span>      <span class="keyword">try</span> {
+<span class="lineno">  25 </span>          TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+<span class="caretline"><span class="lineno">  26 </span>          String imei = <span class="warning">tm.getDeviceId()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  27 </span>          <span class="keyword">if</span> (imei == <span class="keyword">null</span> || imei.equals(<span class="string">"000000000000000"</span>)) {
+<span class="lineno">  28 </span>              <span class="keyword">return</span> <span class="keyword">true</span>;
+<span class="lineno">  29 </span>          }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java</a>:84</span>: <span class="message">Using <code>getSubscriberId</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno">  81 </span>      <span class="comment">// 为空</span>
+<span class="lineno">  82 </span>      <span class="keyword">if</span> (TextUtils.isEmpty(imsi)) {
+<span class="lineno">  83 </span>          TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+<span class="caretline"><span class="lineno">  84 </span>          imsi = <span class="warning">tm.getSubscriberId()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  85 </span>      }
+<span class="lineno">  86 </span>  } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno">  87 </span>      <span class="comment">//.e(TAG, "getImsi error:" + e.toString());</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java</a>:112</span>: <span class="message">Using <code>getDeviceId</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 109 </span>      <span class="comment">// 为空</span>
+<span class="lineno"> 110 </span>      <span class="keyword">if</span> (TextUtils.isEmpty(imei)) {
+<span class="lineno"> 111 </span>          TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+<span class="caretline"><span class="lineno"> 112 </span>          imei = <span class="warning">tm.getDeviceId()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 113 </span>      }
+<span class="lineno"> 114 </span>  } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno"> 115 </span>      <span class="comment">//.e(TAG, "getImei error:" + e.toString());</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java</a>:138</span>: <span class="message">Using <code>getSimSerialNumber</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 135 </span>      <span class="comment">// 为空</span>
+<span class="lineno"> 136 </span>      <span class="keyword">if</span> (TextUtils.isEmpty(iccid)) {
+<span class="lineno"> 137 </span>          TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+<span class="caretline"><span class="lineno"> 138 </span>          iccid = <span class="warning">tm.getSimSerialNumber()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 139 </span>      }
+<span class="lineno"> 140 </span>  } <span class="keyword">catch</span> (Exception e) {
+<span class="lineno"> 141 </span>      <span class="comment">//.e(TAG, "getIccid error:" + e.toString());</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/TelephonyUtil.java</a>:173</span>: <span class="message">Using <code>getLine1Number</code> to get device identifiers is not recommended.</span><br /><pre class="errorlines">
+<span class="lineno"> 170 </span>  <span class="comment">// 为空</span>
+<span class="lineno"> 171 </span>  <span class="keyword">if</span> (TextUtils.isEmpty(phone)) {
+<span class="lineno"> 172 </span>      TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+<span class="caretline"><span class="lineno"> 173 </span>      phone = StringUtil.clearPrefix86(<span class="warning">tm.getLine1Number()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 174 </span>  }
+<span class="lineno"> 175 </span>
+<span class="lineno"> 176 </span>  <span class="keyword">if</span> (StringUtil.length(phone) > <span class="number">0</span>) {
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationHardwareIds" style="display: none;">
+Using these device identifiers is not recommended other than for high value fraud prevention and advanced telephony use-cases. For advertising use-cases, use <code>AdvertisingIdClient$Info#getId</code> and for analytics, use <code>InstanceId#getId</code>.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/training/articles/user-data-ids.html">https://developer.android.com/training/articles/user-data-ids.html</a>
+</div><br/>To suppress this error, use the issue id "HardwareIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">HardwareIds</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Security</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationHardwareIdsLink" onclick="reveal('explanationHardwareIds');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card12Link" onclick="hideid('card12');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="TrustAllX509TrustManager"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card13" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Insecure TLS/SSL trust manager</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java</a>:413</span>: <span class="message"><code>checkClientTrusted</code> is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers</span><br /><pre class="errorlines">
+<span class="lineno"> 410 </span>            }
+<span class="lineno"> 411 </span>
+<span class="lineno"> 412 </span>            <span class="annotation">@Override</span>
+<span class="caretline"><span class="lineno"> 413 </span>            <span class="keyword">public</span> <span class="keyword">void</span> <span class="warning">checkClientTrusted</span>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 414 </span>                    java.security.cert.X509Certificate[] chain, String authType)
+<span class="lineno"> 415 </span>                    <span class="keyword">throws</span> java.security.cert.CertificateException {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java">../../src/main/java/com/example/sayid/myapplication/parseStep/http/HttpRequestThread.java</a>:420</span>: <span class="message"><code>checkServerTrusted</code> is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers</span><br /><pre class="errorlines">
+<span class="lineno"> 417 </span>            }
+<span class="lineno"> 418 </span>
+<span class="lineno"> 419 </span>            <span class="annotation">@Override</span>
+<span class="caretline"><span class="lineno"> 420 </span>            <span class="keyword">public</span> <span class="keyword">void</span> <span class="warning">checkServerTrusted</span>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 421 </span>                    java.security.cert.X509Certificate[] chain, String authType)
+<span class="lineno"> 422 </span>                    <span class="keyword">throws</span> java.security.cert.CertificateException {
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationTrustAllX509TrustManager" style="display: none;">
+This check looks for X509TrustManager implementations whose <code>checkServerTrusted</code> or <code>checkClientTrusted</code> methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers.<br/><br/>To suppress this error, use the issue id "TrustAllX509TrustManager" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">TrustAllX509TrustManager</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Security</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationTrustAllX509TrustManagerLink" onclick="reveal('explanationTrustAllX509TrustManager');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card13Link" onclick="hideid('card13');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="UnprotectedSMSBroadcastReceiver"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card14" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Unprotected SMS BroadcastReceiver</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:40</span>: <span class="message">BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents.</span><br /><pre class="errorlines">
+<span class="lineno"> 37 </span><span class="lineno"> 38 </span>
+<span class="lineno"> 39 </span>  <span class="tag">&lt;service</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"com.example.sayid.myapplication.smsutil.SmSserver"</span> <span class="prefix">android:</span><span class="attribute">enabled</span>=<span class="value">"true"</span>><span class="tag">&lt;/service></span>
+<span class="caretline"><span class="lineno"> 40 </span>  <span class="warning"><span class="tag">&lt;receiver</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"com.example.sayid.myapplication.smsutil.BootReceiver"</span> ></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 41 </span>      <span class="tag">&lt;intent-filter</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">priority</span>=<span class="value">"1000"</span> >
+<span class="lineno"> 42 </span>          <span class="tag">&lt;action</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.provider.Telephony.SMS_RECEIVED"</span> />
+<span class="lineno"> 43 </span>          <span class="tag">&lt;action</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.provider.Telephony.SMS_RECEIVED_2"</span>/>
+</pre>
+
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:53</span>: <span class="message">BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents.</span><br /><pre class="errorlines">
+<span class="lineno"> 50 </span>                <span class="tag">&lt;action</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.intent.action.USER_PRESENT"</span> />
+<span class="lineno"> 51 </span>            <span class="tag">&lt;/intent-filter></span>
+<span class="lineno"> 52 </span>        <span class="tag">&lt;/receiver></span>
+<span class="caretline"><span class="lineno"> 53 </span>        <span class="warning"><span class="tag">&lt;receiver</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"com.example.sayid.myapplication.smsutil.SmSReceiver"</span>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 54 </span>            <span class="tag">&lt;intent-filter</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">priority</span>=<span class="value">"2147483647"</span>>
+<span class="lineno"> 55 </span>                <span class="tag">&lt;action</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.provider.Telephony.SMS_RECEIVED"</span> />
+<span class="lineno"> 56 </span>                <span class="tag">&lt;action</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">name</span>=<span class="value">"android.provider.Telephony.SMS_RECEIVED_2"</span>/>
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationUnprotectedSMSBroadcastReceiver" style="display: none;">
+BroadcastReceivers that declare an intent-filter for SMS_DELIVER or SMS_RECEIVED must ensure that the caller has the BROADCAST_SMS permission, otherwise it is possible for malicious actors to spoof intents.<br/><br/>To suppress this error, use the issue id "UnprotectedSMSBroadcastReceiver" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">UnprotectedSMSBroadcastReceiver</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Security</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUnprotectedSMSBroadcastReceiverLink" onclick="reveal('explanationUnprotectedSMSBroadcastReceiver');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card14Link" onclick="hideid('card14');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="WrongConstant"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card15" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Incorrect constant</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/SmsWriteOpUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/SmsWriteOpUtil.java</a>:99</span>: <span class="message">Must be one or more of: PackageManager.GET_META_DATA, PackageManager.GET_SHARED_LIBRARY_FILES, PackageManager.MATCH_UNINSTALLED_PACKAGES, PackageManager.MATCH_SYSTEM_ONLY, PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS, PackageManager.GET_DISABLED_UNTIL_USED_COMPONENTS, PackageManager.GET_UNINSTALLED_PACKAGES</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> getUid(Context context) {
+<span class="lineno">  97 </span>        <span class="keyword">try</span> {
+<span class="lineno">  98 </span>            <span class="keyword">int</span> uid = context.getPackageManager().getApplicationInfo(context.getPackageName(),
+<span class="caretline"><span class="lineno">  99 </span>                    <span class="error">PackageManager.GET_SERVICES</span>).uid;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>
+<span class="lineno"> 101 </span>            <span class="keyword">return</span> uid;
+<span class="lineno"> 102 </span>        } <span class="keyword">catch</span> (PackageManager.NameNotFoundException e) {
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationWrongConstant" style="display: none;">
+Ensures that when parameter in a method only allows a specific set of constants, calls obey those rules.<br/><br/>To suppress this error, use the issue id "WrongConstant" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">WrongConstant</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Security</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Error</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationWrongConstantLink" onclick="reveal('explanationWrongConstant');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card15Link" onclick="hideid('card15');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="Performance"></a>
+<a name="Recycle"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card16" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Missing recycle() calls</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/sms/SendSms.java">../../src/main/java/com/example/sayid/myapplication/sms/SendSms.java</a>:241</span>: <span class="message">This <code>Cursor</code> should be freed up after use with <code>#close()</code></span><br /><pre class="errorlines">
+<span class="lineno"> 238 </span>  <span class="comment">// 准备系统短信收信箱的uri地址  </span>
+<span class="lineno"> 239 </span>  Uri uri = Uri.parse(<span class="string">"content://sms/sent"</span>);<span class="comment">// 已发件信箱  </span>
+<span class="lineno"> 240 </span>  <span class="comment">// 查询已发件箱里10条已读短信</span>
+<span class="caretline"><span class="lineno"> 241 </span>  Cursor isRead = context.getContentResolver().<span class="warning">query</span>(uri, <span class="keyword">null</span>, <span class="string">"read=1"</span>, <span class="keyword">null</span>, <span class="string">"date desc limit 10"</span>);</span>
+<span class="lineno"> 242 </span>  <span class="keyword">while</span> (isRead.moveToNext()) {
+<span class="lineno"> 243 </span>      <span class="comment">// String phone = isRead.getString(isRead.getColumnIndex("address")).trim();//获取发信人</span>
+<span class="lineno"> 244 </span>      String body = isRead.getString(isRead.getColumnIndex(<span class="string">"body"</span>)).trim();<span class="comment">// 获取信息内容</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/sms/SendSms.java">../../src/main/java/com/example/sayid/myapplication/sms/SendSms.java</a>:262</span>: <span class="message">This <code>Cursor</code> should be freed up after use with <code>#close()</code></span><br /><pre class="errorlines">
+<span class="lineno"> 259 </span>            <span class="comment">// Query SMS</span>
+<span class="lineno"> 260 </span>            Uri uriSms = Uri.parse(<span class="string">"content://sms/sent"</span>);
+<span class="lineno"> 261 </span>
+<span class="caretline"><span class="lineno"> 262 </span>            Cursor c = CR.<span class="warning">query</span>(uriSms, <span class="keyword">new</span> String[]{<span class="string">"_id"</span>, <span class="string">"thread_id"</span>},&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 263 </span>                    <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);
+<span class="lineno"> 264 </span>
+<span class="lineno"> 265 </span>            <span class="keyword">if</span> (<span class="keyword">null</span> != c &amp;&amp; c.moveToFirst()) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java">../../src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java</a>:259</span>: <span class="message">This <code>Cursor</code> should be freed up after use with <code>#close()</code></span><br /><pre class="errorlines">
+<span class="lineno"> 256 </span>        <span class="keyword">try</span> {
+<span class="lineno"> 257 </span>            ContentResolver CR = mContext.getContentResolver();
+<span class="lineno"> 258 </span>            Uri uriSms = Uri.parse(<span class="string">"content://sms/inbox"</span>);
+<span class="caretline"><span class="lineno"> 259 </span>            Cursor c = CR.<span class="warning">query</span>(uriSms, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="string">"date desc"</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 260 </span>            <span class="keyword">if</span> (<span class="keyword">null</span> != c) {
+<span class="lineno"> 261 </span>                <span class="keyword">if</span> (c.moveToFirst()) {
+<span class="lineno"> 262 </span>                    String address = c.getString(c.getColumnIndex(<span class="string">"address"</span>));
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationRecycle" style="display: none;">
+Many resources, such as TypedArrays, VelocityTrackers, etc., should be recycled (with a <code>recycle()</code> call) after use. This lint check looks for missing <code>recycle()</code> calls.<br/><br/>To suppress this error, use the issue id "Recycle" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Recycle</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 7/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationRecycleLink" onclick="reveal('explanationRecycle');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card16Link" onclick="hideid('card16');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="StaticFieldLeak"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card17" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Static Field Leaks</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/pay/AppTache.java">../../src/main/java/com/example/sayid/myapplication/pay/AppTache.java</a>:33</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  30 </span><span class="javadoc">     */</span>
+<span class="lineno">  31 </span>    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> REQUEST_PAY = <span class="number">1</span>;
+<span class="lineno">  32 </span>
+<span class="caretline"><span class="lineno">  33 </span>    <span class="warning"><span class="keyword">public</span> <span class="keyword">static</span> Context context;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  34 </span>
+<span class="lineno">  35 </span>    <span class="javadoc">/**
+</span><span class="lineno">  36 </span><span class="javadoc">     * 私有单例类
+</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/pay/AppTache.java">../../src/main/java/com/example/sayid/myapplication/pay/AppTache.java</a>:35</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>AppTache</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  32 </span>
+<span class="lineno">  33 </span>    <span class="keyword">public</span> <span class="keyword">static</span> Context context;
+<span class="lineno">  34 </span>
+<span class="caretline"><span class="lineno">  35 </span>    <span class="warning"><span class="javadoc">/**</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javadoc">
+</span><span class="lineno">  36 </span><span class="javadoc">     * 私有单例类
+</span><span class="lineno">  37 </span><span class="javadoc">     */</span>
+<span class="lineno">  38 </span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> AppTache appTache;
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/pay/Dialog1_3Activity.java">../../src/main/java/com/example/sayid/myapplication/pay/Dialog1_3Activity.java</a>:24</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>Dialog1_3Activity</code> which has field <code>myContext</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  21 </span>    String content;
+<span class="lineno">  22 </span>    <span class="keyword">static</span> AlertDialog dialog;
+<span class="lineno">  23 </span>    Context myContext;
+<span class="caretline"><span class="lineno">  24 </span>    <span class="warning"><span class="keyword">public</span> <span class="keyword">static</span> Dialog1_3Activity inst;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  25 </span>
+<span class="lineno">  26 </span>
+<span class="lineno">  27 </span>    <span class="keyword">public</span> <span class="keyword">void</span> onCreate(Bundle savedInstanceState) {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/NManager.java">../../src/main/java/com/example/sayid/myapplication/NManager.java</a>:23</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>NManager</code> which has field <code>cxt</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  20 </span><span class="keyword">import</span> <span class="keyword">static</span> com.example.sayid.myapplication.pay.AppTache.context;
+<span class="lineno">  21 </span>
+<span class="lineno">  22 </span><span class="keyword">public</span> <span class="keyword">class</span> NManager {
+<span class="caretline"><span class="lineno">  23 </span>    <span class="warning"><span class="comment">//private final static String TAG = "NManager";</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  24 </span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> NManager instance = <span class="keyword">null</span>;
+<span class="lineno">  25 </span>
+<span class="lineno">  26 </span>    <span class="keyword">private</span> Context cxt;
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java">../../src/main/java/com/example/sayid/myapplication/common/util/NetControlUtil.java</a>:23</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>NetControlUtil</code> which has field <code>m_context</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  20 </span><span class="javadoc">     */</span>
+<span class="lineno">  21 </span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> DELAY_CLOSE_WIFI = <span class="number">5</span>;
+<span class="lineno">  22 </span>
+<span class="caretline"><span class="lineno">  23 </span>    <span class="warning"><span class="javadoc">/**</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javadoc">
+</span><span class="lineno">  24 </span><span class="javadoc">     * 单例类
+</span><span class="lineno">  25 </span><span class="javadoc">     */</span>
+<span class="lineno">  26 </span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> NetControlUtil instance;
+</pre>
+
+<button class="mdl-button mdl-js-button mdl-button--primary" id="StaticFieldLeakDivLink" onclick="reveal('StaticFieldLeakDiv');" />+ 4 More Occurrences...</button>
+<div id="StaticFieldLeakDiv" style="display: none">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ReportModel.java">../../src/main/java/com/example/sayid/myapplication/model/ReportModel.java</a>:28</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>ReportModel</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  25 </span>
+<span class="lineno">  26 </span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> String TAG = <span class="string">"ReportModel"</span>;
+<span class="lineno">  27 </span>
+<span class="caretline"><span class="lineno">  28 </span>    <span class="warning"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> ReportModel instance;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  29 </span>
+<span class="lineno">  30 </span>    <span class="javadoc">/**
+</span><span class="lineno">  31 </span><span class="javadoc">     * 监听网络状态改变，Wifi或移动数据网络打开，立刻上报
+</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java">../../src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java</a>:39</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>SmSutils</code> which has field <code>mContext</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  36 </span>
+<span class="lineno">  37 </span><span class="keyword">public</span> <span class="keyword">class</span> SmSutils {
+<span class="lineno">  38 </span>
+<span class="caretline"><span class="lineno">  39 </span>    <span class="warning"><span class="keyword">private</span> <span class="keyword">static</span> SmSutils instance;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  40 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SmSReceiver mySmSReceiver;
+<span class="lineno">  41 </span>    <span class="keyword">private</span> <span class="keyword">static</span> Context mContext = context;
+<span class="lineno">  42 </span>    <span class="keyword">private</span> NotificationManager myNotificationManager;
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java">../../src/main/java/com/example/sayid/myapplication/smsutil/SmSutils.java</a>:41</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  38 </span>
+<span class="lineno">  39 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SmSutils instance;
+<span class="lineno">  40 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SmSReceiver mySmSReceiver;
+<span class="caretline"><span class="lineno">  41 </span>    <span class="warning"><span class="keyword">private</span> <span class="keyword">static</span> Context mContext = context;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  42 </span>    <span class="keyword">private</span> NotificationManager myNotificationManager;
+<span class="lineno">  43 </span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> isSendResults = <span class="keyword">false</span>;
+<span class="lineno">  44 </span>    <span class="keyword">public</span> <span class="keyword">static</span> ChannelOrderResp bean;
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/common/util/UI.java">../../src/main/java/com/example/sayid/myapplication/common/util/UI.java</a>:45</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>Dialog1_3Activity</code> which has field <code>myContext</code> pointing to <code>Context</code>); this is a memory leak (and also breaks Instant Run)</span><br /><pre class="errorlines">
+<span class="lineno">  42 </span><span class="javadoc">     * 提示用户apn切换回去
+</span><span class="lineno">  43 </span><span class="javadoc">     */</span>
+<span class="lineno">  44 </span>    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> DEAL_TYPE_5 = <span class="number">5</span>;
+<span class="caretline"><span class="lineno">  45 </span>    <span class="warning"><span class="keyword">private</span> <span class="keyword">static</span> Dialog1_3Activity dialog;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  46 </span>
+<span class="lineno">  47 </span>
+<span class="lineno">  48 </span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> showTip(Context context, String text) {
+</pre>
+
+</div>
+</div>
+<div class="metadata"><div class="explanation" id="explanationStaticFieldLeak" style="display: none;">
+A static field will leak contexts.<br/><br/>To suppress this error, use the issue id "StaticFieldLeak" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">StaticFieldLeak</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationStaticFieldLeakLink" onclick="reveal('explanationStaticFieldLeak');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card17Link" onclick="hideid('card17');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="UseValueOf"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card18" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Should use valueOf instead of new</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:331</span>: <span class="message">Use <code>Long.valueOf(rai.firstInstallTime)</code> instead</span><br /><pre class="errorlines">
+<span class="lineno"> 328 </span>                    Long fit = <span class="keyword">null</span>;
+<span class="lineno"> 329 </span>                    Long lut = <span class="keyword">null</span>;
+<span class="lineno"> 330 </span>                    <span class="keyword">if</span> (rai.firstInstallTime > <span class="number">0</span>) {
+<span class="caretline"><span class="lineno"> 331 </span>                        fit = <span class="warning"><span class="keyword">new</span> Long(rai.firstInstallTime)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 332 </span>                    }
+<span class="lineno"> 333 </span>                    <span class="keyword">if</span> (rai.lastUpdateTime > <span class="number">0</span>) {
+<span class="lineno"> 334 </span>                        lut = <span class="keyword">new</span> Long(rai.lastUpdateTime);
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java">../../src/main/java/com/example/sayid/myapplication/model/ChannelOrderModel.java</a>:334</span>: <span class="message">Use <code>Long.valueOf(rai.lastUpdateTime)</code> instead</span><br /><pre class="errorlines">
+<span class="lineno"> 331 </span>                        fit = <span class="keyword">new</span> Long(rai.firstInstallTime);
+<span class="lineno"> 332 </span>                    }
+<span class="lineno"> 333 </span>                    <span class="keyword">if</span> (rai.lastUpdateTime > <span class="number">0</span>) {
+<span class="caretline"><span class="lineno"> 334 </span>                        lut = <span class="warning"><span class="keyword">new</span> Long(rai.lastUpdateTime)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 335 </span>                    }
+<span class="lineno"> 336 </span>                    jsonO.put(<span class="string">"appName"</span>, rai.appName);
+<span class="lineno"> 337 </span>                    jsonO.put(<span class="string">"packageName"</span>, rai.packageName);
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationUseValueOf" style="display: none;">
+You should not call the constructor for wrapper classes directly, such as`new Integer(42)`. Instead, call the <code>valueOf</code> factory method, such as <code>Integer.valueOf(42)</code>. This will typically use less memory because common integers such as 0 and 1 will share a single instance.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UseValueOf" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">UseValueOf</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUseValueOfLink" onclick="reveal('explanationUseValueOf');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card18Link" onclick="hideid('card18');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="UnusedResources"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card19" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Unused resources</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/drawable/icon.png">../../src/main/res/drawable/icon.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable/icon.png" /><span class="message">The resource <code>R.drawable.icon</code> appears to be unused</span><br clear="right"/>
+<span class="location"><a href="../../src/main/res/drawable/mydialog.xml">../../src/main/res/drawable/mydialog.xml</a>:2</span>: <span class="message">The resource <code>R.drawable.mydialog</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
+<span class="caretline"><span class="lineno"> 2 </span><span class="warning"><span class="tag">&lt;shape</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 3 </span>    <span class="tag">&lt;corners</span><span class="attribute">
+</span><span class="lineno"> 4 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">bottomLeftRadius</span>=<span class="value">"10dip"</span>
+<span class="lineno"> 5 </span>        <span class="prefix">android:</span><span class="attribute">bottomRightRadius</span>=<span class="value">"10dip"</span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationUnusedResources" style="display: none;">
+Unused resources make applications larger and slow down builds.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">UnusedResources</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 3/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUnusedResourcesLink" onclick="reveal('explanationUnusedResources');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card19Link" onclick="hideid('card19');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="Usability:Icons"></a>
+<a name="IconLocation"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card20" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Image defined in density-independent drawable folder</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/drawable/icon.png">../../src/main/res/drawable/icon.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable/icon.png" /><span class="message">Found bitmap drawable <code>res/drawable/icon.png</code> in densityless folder</span><br clear="right"/>
+</div>
+<div class="metadata"><div class="explanation" id="explanationIconLocation" style="display: none;">
+The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to <code>drawable-mdpi</code> and consider providing higher and lower resolution versions in <code>drawable-ldpi</code>, <code>drawable-hdpi</code> and <code>drawable-xhdpi</code>. If the icon <b>really</b> is density independent (for example a solid color) you can place it in <code>drawable-nodpi</code>.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+</div><br/>To suppress this error, use the issue id "IconLocation" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">IconLocation</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Icons</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Usability</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 5/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationIconLocationLink" onclick="reveal('explanationIconLocation');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card20Link" onclick="hideid('card20');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="MissingIssues"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card21" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Disabled Checks</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+One or more issues were not run by lint, either 
+because the check is not enabled by default, or because 
+it was disabled with a command line flag or via one or 
+more <code>lint.xml</code> configuration files in the project directories.
+<div id="SuppressedIssues" style="display: none;"><br/><br/><div class="issue">
+<div class="id">AppLinksAutoVerifyError<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Ensures that app links are correctly set and associated with website.<br/><div class="moreinfo">More info: <a href="https://g.co/appindexing/applinks">https://g.co/appindexing/applinks</a>
+</div><br/>To suppress this error, use the issue id "AppLinksAutoVerifyError" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">AppLinksAutoVerifyWarning<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Ensures that app links are correctly set and associated with website.<br/><div class="moreinfo">More info: <a href="https://g.co/appindexing/applinks">https://g.co/appindexing/applinks</a>
+</div><br/>To suppress this error, use the issue id "AppLinksAutoVerifyWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">BackButton<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Other platforms use an explicit back button with label to allow the user to navigate up the application's hierarchy. Instead, Android uses the main action bar's app icon for hierarchical navigation and the navigation bar's back button for temporal navigation."<br/>
+This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/pure-android.html">http://developer.android.com/design/patterns/pure-android.html</a>
+</div><br/>To suppress this error, use the issue id "BackButton" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">ConvertToWebp<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+The WebP format is typically more compact than PNG and JPEG. As of Android 4.2.1 it supports transparency and lossless conversion as well. Note that there is a quickfix in the IDE which lets you perform conversion.<br/>
+<br/>
+Launcher icons must be in the PNG format.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "ConvertToWebp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">EasterEgg<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+An "easter egg" is code deliberately hidden in the code, both from potential users and even from other developers. This lint check looks for code which looks like it may be hidden from sight.<br/><br/>To suppress this error, use the issue id "EasterEgg" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">FieldGetter<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
+<br/>
+<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+</div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">GoogleAppIndexingApiWarning<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search.<br/><div class="moreinfo">More info: <a href="https://g.co/AppIndexing/AndroidStudio">https://g.co/AppIndexing/AndroidStudio</a>
+</div><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "GoogleAppIndexingApiWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">IconExpectedSize<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+</div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">LogConditional<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+The BuildConfig class (available in Tools 17) provides a constant, "DEBUG", which indicates whether the code is being built in release mode or in debug mode. In release mode, you typically want to strip out all the logging calls. Since the compiler will automatically remove all code which is inside a "if (false)" check, surrounding your logging calls with a check for BuildConfig.DEBUG is a good idea.<br/>
+<br/>
+If you <b>really</b> intend for the logging to be present in release mode, you can suppress this warning with a @SuppressLint annotation for the intentional logging calls.<br/><br/>To suppress this error, use the issue id "LogConditional" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">MangledCRLF<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+On Windows, line endings are typically recorded as carriage return plus newline: \r\n.<br/>
+<br/>
+This detector looks for invalid line endings with repeated carriage return characters (without newlines). Previous versions of the ADT plugin could accidentally introduce these into the file, and when editing the file, the editor could produce confusing visual artifacts.<br/><div class="moreinfo">More info: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421">https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421</a>
+</div><br/>To suppress this error, use the issue id "MangledCRLF" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">MissingRegistered<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+If a class is referenced in the manifest or in a layout file, it must also exist in the project (or in one of the libraries included by the project. This check helps uncover typos in registration names, or attempts to rename or move classes without updating the manifest file properly.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">http://developer.android.com/guide/topics/manifest/manifest-intro.html</a>
+</div><br/>To suppress this error, use the issue id "MissingRegistered" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">NegativeMargin<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Margin values should be positive. Negative values are generally a sign that you are making assumptions about views surrounding the current one, or may be tempted to turn off child clipping to allow a view to escape its parent. Turning off child clipping to do this not only leads to poor graphical performance, it also results in wrong touch event handling since touch events are based strictly on a chain of parent-rect hit tests. Finally, making assumptions about the size of strings can lead to localization problems.<br/><br/>To suppress this error, use the issue id "NegativeMargin" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">NewerVersionAvailable<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the <code>GradleDependency</code> check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also <b>much</b> slower.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "NewerVersionAvailable" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">PermissionImpliesUnsupportedChromeOsHardware<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+The <code>&lt;uses-permission></code> element should not require a permission that implies an unsupported Chrome OS hardware feature. Google Play assumes that certain hardware related permissions indicate that the underlying hardware features are required by default. To fix the issue, consider declaring the corresponding uses-feature element with <code>required="false"</code> attribute.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/topic/arc/manifest.html#implied-features">https://developer.android.com/topic/arc/manifest.html#implied-features</a>
+</div><br/>To suppress this error, use the issue id "PermissionImpliesUnsupportedChromeOsHardware" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">Registered<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Activities, services and content providers should be registered in the <code>AndroidManifest.xml</code> file using <code>&lt;activity></code>, <code>&lt;service></code> and <code>&lt;provider></code> tags.<br/>
+<br/>
+If your activity is simply a parent class intended to be subclassed by other "real" activities, make it an abstract class.<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">http://developer.android.com/guide/topics/manifest/manifest-intro.html</a>
+</div><br/>To suppress this error, use the issue id "Registered" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">SelectableText<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
+<br/>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">StopShip<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">TypographyQuotes<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+Straight single quotes and double quotes, when used as a pair, can be replaced by "curvy quotes" (or directional quotes). This can make the text more readable.<br/>
+<br/>
+Note that you should never use grave accents and apostrophes to quote, `like this'.<br/>
+<br/>
+(Also note that you should not use curvy quotes for code fragments.)<br/><div class="moreinfo">More info: <a href="http://en.wikipedia.org/wiki/Quotation_mark">http://en.wikipedia.org/wiki/Quotation_mark</a>
+</div><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "TypographyQuotes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">UnpackedNativeCode<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+This app loads native libraries using <code>System.loadLibrary()</code>.<br/>
+<br/>
+Consider adding <code>android:extractNativeLibs="false"</code> to the <code>&lt;application></code> tag in AndroidManifest.xml. Starting with Android 6.0, this will make installation faster, the app will take up less space on the device and updates will have smaller download sizes.<br/><br/>To suppress this error, use the issue id "UnpackedNativeCode" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">UnsupportedChromeOsHardware<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+The <code>&lt;uses-feature></code> element should not require this unsupported Chrome OS hardware feature. Any uses-feature not explicitly marked with <code>required="false"</code> is necessary on the device to be installed on. Ensure that any features that might prevent it from being installed on a Chrome OS device are reviewed and marked as not required in the manifest.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/topic/arc/manifest.html#incompat-entries">https://developer.android.com/topic/arc/manifest.html#incompat-entries</a>
+</div><br/>To suppress this error, use the issue id "UnsupportedChromeOsHardware" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+<div class="issue">
+<div class="id">UnusedIds<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+<div class="explanation">
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.<br/><br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+</div>
+</div>
+</div>              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SuppressedIssuesLink" onclick="reveal('SuppressedIssues');">
+List Missing Issues</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="card21Link" onclick="hideid('card21');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="SuppressInfo"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="card22" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Suppressing Warnings and Errors</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+Lint errors can be suppressed in a variety of ways:<br/>
+<br/>
+1. With a <code>@SuppressLint</code> annotation in the Java code<br/>
+2. With a <code>tools:ignore</code> attribute in the XML file<br/>
+3. With a //noinspection comment in the source code<br/>
+4. With ignore flags specified in the <code>build.gradle</code> file, as explained below<br/>
+5. With a <code>lint.xml</code> configuration file in the project<br/>
+6. With a <code>lint.xml</code> configuration file passed to lint via the --config flag<br/>
+7. With the --ignore flag passed to lint.<br/>
+<br/>
+To suppress a lint warning with an annotation, add a <code>@SuppressLint("id")</code> annotation on the class, method or variable declaration closest to the warning instance you want to disable. The id can be one or more issue id's, such as <code>"UnusedResources"</code> or <code>{"UnusedResources","UnusedIds"}</code>, or it can be <code>"all"</code> to suppress all lint warnings in the given scope.<br/>
+<br/>
+To suppress a lint warning with a comment, add a <code>//noinspection id</code> comment on the line before the statement with the error.<br/>
+<br/>
+To suppress a lint warning in an XML file, add a <code>tools:ignore="id"</code> attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the <code>xmlns:android</code> declaration:<br/>
+<code>xmlns:tools="http://schemas.android.com/tools"</code><br/>
+<br/>
+To suppress a lint warning in a <code>build.gradle</code> file, add a section like this:<br/>
+<br/>
+android {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;lintOptions {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disable 'TypographyFractions','TypographyQuotes'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/>
+<br/>
+Here we specify a comma separated list of issue id's after the disable command. You can also use <code>warning</code> or <code>error</code> instead of <code>disable</code> to change the severity of issues.<br/>
+<br/>
+To suppress lint warnings with a configuration XML file, create a file named <code>lint.xml</code> and place it at the root directory of the module in which it applies.<br/>
+<br/>
+The format of the <code>lint.xml</code> file is something like the following:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?><br/>
+&lt;lint><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Disable this given check in this project --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="IconMissingDensityFolder" severity="ignore" /><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Ignore the ObsoleteLayoutParam issue in the given files --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="ObsoleteLayoutParam"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout/activation.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout-xlarge/activation.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/issue><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Ignore the UselessLeaf issue in the given file --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="UselessLeaf"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout/main.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/issue><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Change the severity of hardcoded strings to "error" --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="HardcodedText" severity="error" /><br/>
+&lt;/lint><br/>
+<br/>
+To suppress lint checks from the command line, pass the --ignore flag with a comma separated list of ids to be suppressed, such as:<br/>
+<code>$ lint --ignore UnusedResources,UselessLeaf /my/project/path</code><br/>
+<br/>
+For more information, see <a href="http://g.co/androidstudio/suppressing-lint-warnings">http://g.co/androidstudio/suppressing-lint-warnings</a><br/>
+
+            </div>
+            </div>
+          </section>    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/res/merged/androidTest/debug/layout/dialog1.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/bundles/debug/res/layout/dialog1.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\layout\\notification.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\layout\\notification.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/res/merged/androidTest/debug/layout/notification.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/bASE_400_Sdk_Core/build/intermediates/bundles/debug/res/layout/notification.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dialog1.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\sayid\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\layout\\dialog1.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dialog1.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\layout\\dialog1.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dialog1.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\layout\\dialog1.xml"
+    },
+    {
+        "merged": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification.xml",
+        "source": "/Users/shirleyhyy/Desktop/proguardTest/MsmDome/C:\\Users\\shirleyhyy\\Desktop\\proguardTest\\MsmDome\\C:\\Users\\sayid\\Desktop\\MsmDome\\MsmDome\\bASE_400_Sdk_Core\\build\\intermediates\\bundles\\debug\\res\\layout\\notification.xml"
+    }
+]
